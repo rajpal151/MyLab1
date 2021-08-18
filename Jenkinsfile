@@ -26,7 +26,7 @@ pipeline{
         //stage 4 publish the artifacts to nexus
         stage ('Publish to Nexus'){
             steps {
-                nexusArtifactUploader artifacts: [[artifactId: 'VinayDevOpsLab', classifier: '', file: 'target/', type: 'war'], [artifactId: 'VinayDevOpsLab', classifier: '', file: 'target/VinayDevOpsLab-0.0.4.war', type: 'war']], credentialsId: 'c48edd7c-df4b-44a5-8712-93842829d6a9', groupId: 'com.vinaysdevopslab', nexusUrl: '192.168.1.2:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'http://192.168.1.2:8081/repository/VinayDevOpsLab-SNAPSHOT/', version: '0.0.4'
+                nexusArtifactUploader artifacts: [[artifactId: 'VinayDevOpsLab', classifier: '', file: 'target/VinayDevOpsLab-0.0.4.war', type: 'war'], [artifactId: 'VinayDevOpsLab', classifier: '', file: 'target/VinayDevOpsLab-0.0.4.war', type: 'war']], credentialsId: 'c48edd7c-df4b-44a5-8712-93842829d6a9', groupId: 'com.vinaysdevopslab', nexusUrl: '192.168.1.2:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'http://192.168.1.2:8081/repository/VinayDevOpsLab-SNAPSHOT/', version: '0.0.4'
           }
         }
 
